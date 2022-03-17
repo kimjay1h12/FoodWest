@@ -1,10 +1,8 @@
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { Card, Container ,Button,} from '@mui/material';
-import Box from '@mui/material/Box';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import {  Container ,Button,} from '@mui/material';
+
 import TextField from '@mui/material/TextField';
-import EmailIcon from '@mui/icons-material/Email';
-import VpnKeyIcon from '@mui/icons-material/VpnKey';
+
 import {Link} from 'react-router-dom'
 const Getstarted = () => {
     const mystyle = ({
@@ -14,7 +12,7 @@ textDecoration:'none'
         Button:{
             width:'250px',
             height:'50px',
-            background:'#f90',
+            background:'red',
             marginTop:'80px',
             color:'white'
         },

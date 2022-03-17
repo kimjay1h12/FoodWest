@@ -6,7 +6,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import pizza from '../src/images/img2.jpg'
 import InputBase from '@mui/material/InputBase';
-
+import Cart from '../src/images/cart-1.png';
+import Cart1 from '../src/images/cart-2.png';
+import Cart2 from '../src/images/cart-3.png';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -19,13 +21,13 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions,List } from '@mui/material';
 import Mushroomrice from '../src/images/mushroomrice.jpg';
 import Seafoodrice from '../src/images/seafoodrice.jpg';
-import Ofada from '../src/images/ofada.jpg'
+
 import Chicken from '../src/images/chicken.jpg';
 import Spagetti from '../src/images/spagetti.jpg';
 import Pasta from '../src/images/pasta.jpg';
 import {Link} from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline';
-import Handburger from  '../src/images/handburger.webp'
+
 
 
 import Fab from '@mui/material/Fab';
@@ -110,8 +112,8 @@ width:'100%'
         
       },
       img:{
-        width:'70px'
-        ,height:'70px',
+        width:'90px'
+        ,height:'90px',
         borderRadius:'50px',
         marginTop:'1px',
         marginLeft:'10px'
@@ -119,13 +121,13 @@ width:'100%'
    
       },
       Link:{
-color:'#f90'
+color:'white'
       },
         Search:{
  background:'#f90'
         },
         header:{
-            background:'whitesmoke'
+            background:'red'
         }
     })
   return (
@@ -134,7 +136,7 @@ color:'#f90'
       <AppBar position="static" style={mystyle.header} >
         <Toolbar>
           <IconButton
-          style={{color:'#f90'}}
+     
             size="large"
             edge="start"
             color="inherit"
@@ -166,7 +168,7 @@ color:'#f90'
     
     <CssBaseline />
       <Container maxWidth="sm" style={mystyle.container}  >
-      <Card sx={{ maxWidth: "100%" }} style={mystyle.card} >
+      <Card sx={{ maxWidth: "100%"}} style={mystyle.card} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -178,7 +180,7 @@ color:'#f90'
             Pizza
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Price: 3000 Naira 
+          Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -202,7 +204,7 @@ color:'#f90'
             Mushroom Rice
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Price: 3000 Naira 
+          Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -227,7 +229,7 @@ color:'#f90'
            Chicken
          </Typography>
          <Typography variant="body2" color="text.secondary">
-         Price: 3000 Naira 
+         Price: $30.70 
          </Typography>
        </CardContent>
      </CardActionArea>
@@ -252,7 +254,7 @@ color:'#f90'
             Spaggtti
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Price: 3000 Naira 
+          Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -277,7 +279,7 @@ color:'#f90'
             Pasta
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Price: 3000 Naira 
+          Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -301,7 +303,7 @@ color:'#f90'
            Seafood Rice
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Price: 3000 Naira 
+          Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -311,23 +313,15 @@ color:'#f90'
         </Button>
       </CardActions>
     </Card>
-    
-        <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
-          <List>
-         <img src={Handburger}  style={mystyle.img} alt="handburger"/>
-      <Typography   style={mystyle.Typography} >
-        Double Blast Handburger
-        <br/>
-        <Link to="#home" style={{textDecoration:'none'}} >From $70.36</Link>
-        
-      </Typography>
-     
-          </List>
-         
-          </Card>
+    <Card sx={{ maxWidth: "100%" }} style={{marginBottom:'-8%',marginTop:'30px'}}  >
+    <Typography style={{textAlign:'center',color:'red',fontWeight:'900'}} >
+         Free Delivery product
+       </Typography>
+       </Card>
           <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
+         
           <List>
-         <img src={Ofada}  style={mystyle.img} alt="handburger"/>
+         <img src={Cart}  style={mystyle.img} alt="handburger"/>
       <Typography   style={mystyle.Typography} >
         Double Blast Handburger
         <br/>
@@ -339,7 +333,7 @@ color:'#f90'
           </Card>
           <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
           <List>
-         <img src={Handburger}  style={mystyle.img} alt="handburger"/>
+         <img src={Cart1}  style={mystyle.img} alt="handburger"/>
       <Typography   style={mystyle.Typography} >
         Double Blast Handburger
         <br/>
@@ -351,7 +345,7 @@ color:'#f90'
           </Card>
           <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
           <List>
-         <img src={Handburger}  style={mystyle.img} alt="handburger"/>
+         <img src={Cart2}  style={mystyle.img} alt="handburger"/>
       <Typography   style={mystyle.Typography} >
         Double Blast Handburger
         <br/>
@@ -368,18 +362,18 @@ color:'#f90'
     
      <AppBar position="fixed" color="primary" style={mystyle.header} sx={{ top: 'auto', bottom: 0 }}>
        <Toolbar>
-         <IconButton color="inherit" aria-label="open drawer" style={{color:'#f90'}} >
+         <IconButton color="inherit" aria-label="open drawer"  >
            <HomeIcon/>
          </IconButton>
-         <IconButton  style={{marginLeft:'35px',color:'#f90'}} color="inherit">
-           <SearchIcon/>
+         <IconButton  style={{marginLeft:'35px'}} color="inherit">
+         <Link to="/Search" style={mystyle.Link} ><SearchIcon/></Link> 
          </IconButton>
          <StyledFab color="secondary" aria-label="add"style={mystyle.Search} >
            <LocalMallIcon />
          </StyledFab>
          <Box sx={{ flexGrow: 1 }} />
-         <IconButton color="inherit" style={{marginRight:'30px',color:'#f90'}} >
-           <StarsIcon/>
+         <IconButton color="inherit" style={{marginRight:'30px'}} >
+          <Link to="/Bonus"  style={mystyle.Link}> <StarsIcon/></Link>
          </IconButton>
          <IconButton color="inherit" >
            <Link to="/Profile" style={mystyle.Link} ><PersonIcon/></Link>

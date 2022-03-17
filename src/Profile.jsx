@@ -5,7 +5,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import List from '@mui/material/List';
 import {Link} from 'react-router-dom'
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled, } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -25,7 +25,7 @@ import Fab from '@mui/material/Fab';
 
 import Typography from '@mui/material/Typography';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
-import { Card, Container ,Button,} from '@mui/material';
+import { Card, Container } from '@mui/material';
 const StyledFab = styled(Fab)({
     position: 'absolute',
     zIndex: 1,
@@ -41,8 +41,8 @@ const Profile = () => {
          color:'red'
         },
         img:{
-            width:"80px",
-            height:'80px',
+            width:"70px",
+            height:'70px',
             borderRadius:'90px'
         },
         container:{
@@ -53,14 +53,14 @@ const Profile = () => {
             flexDirection:'row',
           
         },  header:{
-            background:'whitesmoke'
+            background:'red'
         }
         ,Text:{
             marginLeft:'20px'
         },
         
       Link:{
-color:'#f90'
+color:'white'
       },
         icon:{
             float:'right',
@@ -121,15 +121,15 @@ color:'#f90'
          <IconButton color="inherit" aria-label="open drawer">
          <Link to="/Home" style={mystyle.Link} ><HomeIcon/></Link>
          </IconButton>
-         <IconButton  style={{marginLeft:'35px',color:'#f90'}} color="inherit">
-           <SearchIcon/>
+         <IconButton  style={{marginLeft:'35px'}} color="inherit">
+         <Link to="/Search" style={mystyle.Link} ><SearchIcon/></Link> 
          </IconButton>
          <StyledFab color="secondary" aria-label="add"style={mystyle.Search} >
            <LocalMallIcon />
          </StyledFab>
          <Box sx={{ flexGrow: 1 }} />
-         <IconButton color="inherit" style={{marginRight:'30px',color:'#f90'}} >
-           <StarsIcon/>
+         <IconButton color="inherit" style={{marginRight:'30px'}} >
+         <Link to="/Bonus"  style={mystyle.Link}> <StarsIcon/></Link>
          </IconButton>
          <IconButton color="inherit">
            <Link to="/Profile" style={mystyle.Link} ><PersonIcon/></Link>
