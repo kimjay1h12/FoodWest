@@ -1,14 +1,17 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
+import B1 from '../src/images/1.png';
+import B2 from '../src/images/2.png';
+import B3 from '../src/images/3.png';
+import { useState } from 'react';
+
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import pizza from '../src/images/img2.jpg'
 import InputBase from '@mui/material/InputBase';
-import Cart from '../src/images/cart-1.png';
-import Cart1 from '../src/images/cart-2.png';
-import Cart2 from '../src/images/cart-3.png';
+
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -18,7 +21,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions,List } from '@mui/material';
+import { Button, CardActionArea, CardActions, } from '@mui/material';
 import Mushroomrice from '../src/images/mushroomrice.jpg';
 import Seafoodrice from '../src/images/seafoodrice.jpg';
 
@@ -34,6 +37,8 @@ import Fab from '@mui/material/Fab';
 
 
 import { Container } from '@mui/material';
+
+
 const StyledFab = styled(Fab)({
     position: 'absolute',
     zIndex: 1,
@@ -67,6 +72,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
+
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
@@ -85,7 +91,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Home() {
-
+  const [Count, setCount] = useState(0)
     const mystyle =({
       Typography:{
 float:'RIGHT',
@@ -94,8 +100,7 @@ marginTop:'10px',
 fontWeight:'700'
       },
         card:{
-            marginTop:'50px',
-           
+            marginTop:'50px',           
         },
         container3:{
 width:'100%'
@@ -127,7 +132,7 @@ color:'white'
  background:'#f90'
         },
         header:{
-            background:'red'
+            background:'#900'
         }
     })
   return (
@@ -166,13 +171,23 @@ color:'white'
       </AppBar>
     </Box>
     
+    
     <CssBaseline />
+    <Card  style={{display:'flex', flexDirection:'row',overflow:'auto',}}  >
+   
+   <img src={B1} alt='b1' style={{width:'100%' ,marginLeft:'20px', marginTop:'20px'}}/>
+            <img src={B2} alt='b1' style={{width:'100%', height:'auto' ,marginLeft:'20px', marginTop:'20px'}}/>
+           
+            <img src={B3} alt='b1' style={{width:'100%',height:'auto' ,marginLeft:'20px', marginTop:'20px'}}/>
+           
+           
+   </Card>
       <Container maxWidth="sm" style={mystyle.container}  >
       <Card sx={{ maxWidth: "100%"}} style={mystyle.card} >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="300"
+          height='200px'
           image={pizza}
         />
         <CardContent>
@@ -203,18 +218,20 @@ color:'white'
           <Typography gutterBottom variant="h5" component="div">
             Mushroom Rice
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+         
+          <Typography variant="body2" color="text.secondary" >
+            
           Price: $30.70 
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary"  onClick={()=> setCount(Count + 1)} >
          Add to cart
         </Button>
       </CardActions>
     </Card>
-     
+   
     <CssBaseline />
      
      <Card sx={{ maxWidth: "100%" }} style={mystyle.card} >
@@ -313,48 +330,7 @@ color:'white'
         </Button>
       </CardActions>
     </Card>
-    <Card sx={{ maxWidth: "100%" }} style={{marginBottom:'-8%',marginTop:'30px'}}  >
-    <Typography style={{textAlign:'center',color:'red',fontWeight:'900'}} >
-         Free Delivery product
-       </Typography>
-       </Card>
-          <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
-         
-          <List>
-         <img src={Cart}  style={mystyle.img} alt="handburger"/>
-      <Typography   style={mystyle.Typography} >
-        Double Blast Handburger
-        <br/>
-        
-      </Typography>
-     
-          </List>
-         
-          </Card>
-          <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
-          <List>
-         <img src={Cart1}  style={mystyle.img} alt="handburger"/>
-      <Typography   style={mystyle.Typography} >
-        Double Blast Handburger
-        <br/>
-        
-      </Typography>
-     
-          </List>
-         
-          </Card>
-          <Card sx={{ maxWidth: "100%" }} style={mystyle.card2} >
-          <List>
-         <img src={Cart2}  style={mystyle.img} alt="handburger"/>
-      <Typography   style={mystyle.Typography} >
-        Double Blast Handburger
-        <br/>
-        
-      </Typography>
-     
-          </List>
-         
-          </Card>
+    
       
       </Container >
       
@@ -368,8 +344,8 @@ color:'white'
          <IconButton  style={{marginLeft:'35px'}} color="inherit">
          <Link to="/Search" style={mystyle.Link} ><SearchIcon/></Link> 
          </IconButton>
-         <StyledFab color="secondary" aria-label="add"style={mystyle.Search} >
-           <LocalMallIcon />
+         <StyledFab color="secondary" aria-label="add"style={mystyle.Search} >{Count}
+           <Link to="/Cart " style={mystyle.Link}><LocalMallIcon  /> </Link>
          </StyledFab>
          <Box sx={{ flexGrow: 1 }} />
          <IconButton color="inherit" style={{marginRight:'30px'}} >

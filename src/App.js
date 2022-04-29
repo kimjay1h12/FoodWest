@@ -4,11 +4,15 @@ import Logo from '../src/images/logo2.jpg'
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
+
 import './App.css';
 import {  Container ,Button,} from '@mui/material';
 
 
 export default function App() {
+ 
+   
+
   const mystyle = ({
     container2:{
       textAlign:'center',
@@ -22,20 +26,25 @@ export default function App() {
    
     button:{
       color:'white',
-      background:'red',
+      background:'#900',
       marginBottom:'40px',
       width:'250px',
       height:'45px',
      marginTop:'200px',
      fontWeight:'500',
+     position:'static'
      
 
     },
     h1:{
       marginTop:"-1%",
-      fontSize:'27px',
+      fontSize:'24px',
       fontWeight:'700',
-      color:'red'
+      color:'#900'
+    },
+    logo:{
+      width:'142px',marginTop:'120px', height:'142px'
+     
     },
     container :{
       textAlign:'center',
@@ -47,8 +56,10 @@ export default function App() {
 
   return (
     <div className="Body" >
-    <Container   style={mystyle.container} >
-<img src={Logo} alt='Logo' style={{width:'150px',marginTop:'120px', height:'150px'}}/>
+    <Container 
+     style={mystyle.container} >
+       
+<img src={Logo} id='img' alt='Logo' style={mystyle.logo}/>
 <h3 style={mystyle.h1} >Foodwest</h3>
     </Container>
     <Container style={mystyle.container2} >

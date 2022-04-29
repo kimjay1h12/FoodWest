@@ -53,7 +53,7 @@ const Profile = () => {
             flexDirection:'row',
           
         },  header:{
-            background:'red'
+            background:'#900'
         }
         ,Text:{
             marginLeft:'20px'

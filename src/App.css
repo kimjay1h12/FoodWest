@@ -13,26 +13,31 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
+
+ h1{
+   animation-name:jay;
+   animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+ }
+
+#img{
+  animation-name: kim;
+  animation-duration: 1s;  
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+ animation-direction: alternate-reverse;
+}
+@keyframes kim {
   from {
-    transform: rotate(0deg);
+    width: 145px;
+    height: 145px;
   }
   to {
-    transform: rotate(360deg);
+    height: 150px;
+   width: 150px;
   }
 }

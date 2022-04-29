@@ -1,0 +1,48 @@
+import * as React from 'react';
+import {Link} from 'react-router-dom';
+import Logo from '../src/images/logo2.jpg'
+import { makeStyles } from '@mui/styles';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {  Grid,Typography,Button} from '@mui/material';
+const useStyles = makeStyles({
+root:{
+'& img':{
+  width:"200px",
+  height:'200px',
+},
+'& button':{
+ 
+width:'250',
+color:'white',
+height:'40px',
+background:"red",
+textDecoration:'none'
+},
+}
+})
+export default function App() {
+const classes = useStyles();
+  return (
+    <div className={classes.root} >
+    <Grid container
+    alignItems="center"
+    justify="center"
+    flexDirection="column"
+ >
+       
+<img src={Logo} id='img' alt='Logo' />
+<Typography variant='h3' color="red" >
+  Foodwest
+</Typography>
+  
+    
+    <Link to="/Getstarted"  ><Button className='button'>Get Started  <ArrowForwardIcon/> </Button></Link>
+ </Grid>
+  
+
+
+
+ 
+    </div>
+  );
+}
